@@ -5,12 +5,14 @@ import "zeppelin-solidity/contracts/ECRecovery.sol";
 
 contract SignedOracle is BasicOracle {
 
-  constructor(
+  function initialize(
     address _dataSource
   )
-    BasicOracle(_dataSource)
-    public 
-  {}
+    public
+    isInitializer("SignedOracle", "0.0.0")
+  {
+    BasicOracle.initialize(_dataSource);
+  }
 
   function setResult(bytes32 _result, bytes _signature) public {
     // Generate message hash
