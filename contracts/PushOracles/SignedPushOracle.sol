@@ -5,13 +5,15 @@ import "../SignedOracle.sol";
 
 contract SignedPushOracle is SignedOracle, PushOracleBase {
 
-  constructor (
+  function initialize (
     address _dataSource,
     IOracleHandler _handler
   )
     public
-    SignedOracle(_dataSource)
-    PushOracleBase(_handler)
-  {}
+    isInitializer("BasicPushOracle", "0.0.0")
+  {
+    SignedOracle.initialize(_dataSource);
+    PushOracleBase.initialize(_handler, 0);
+  }
 
 }
