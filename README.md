@@ -1,6 +1,6 @@
 # Tidbit
 
-A library for oracles on Ethereum.
+A library for building oracles on Ethereum
 
 ### Setup
 

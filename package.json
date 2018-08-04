@@ -1,6 +1,7 @@
 {
-  "name": "tidbit",
+  "name": "tidbit-contracts-zos",
   "version": "0.1.0",
+  "description": "A library for building oracles on Ethereum",
   "license": "MIT",
   "main": "lib/index.js",
   "files": [
@@ -8,11 +9,19 @@
     "lib",
     "src"
   ],
+  "keywords": [
+    "Ethereum",
+    "Oracle",
+    "Prediction-Market",
+    "Solidity",
+    "Tidbit",
+    "Oracles",
+    "Level K",
+    "LevelK"
+  ],
+  "author": "Level K - https://levelk.io",
   "dependencies": {
-    "moment": "^2.22.0",
-    "truffle-blockchain-utils": "^0.0.3",
-    "truffle-hdwallet-provider": "^0.0.3",
-    "zeppelin-solidity": "1.8.0",
+    "zeppelin-solidity": "^1.11.0",
     "zos-lib": "^0.1.26"
   },
   "devDependencies": {
@@ -31,6 +40,8 @@
     "solidity-coverage": "^0.5.5",
     "standard": "^10.0.3",
     "truffle": "^4.1.13",
+    "truffle-blockchain-utils": "^0.0.3",
+    "truffle-hdwallet-provider": "^0.0.3",
     "web3": "^1.0.0-beta.35",
     "web3-utils": "^1.0.0-beta.35"
   },

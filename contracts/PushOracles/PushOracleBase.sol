@@ -8,7 +8,7 @@ contract PushOracleBase is Migratable, OracleBase {
 
   IOracleHandler public handler;
 
-  function initialize(IOracleHandler _handler, uint unusedParam) public isInitializer("PushOracleBase", "0.0.0") {
+  function initialize(IOracleHandler _handler, uint unusedParam) public isInitializer("PushOracleBase", "0.1.0") {
     handler = _handler;
   }
 
