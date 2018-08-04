@@ -2,12 +2,13 @@ pragma solidity ^0.4.24;
 
 import "./OracleBase.sol";
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
+import "zos-lib/contracts/migrations/Migratable.sol";
 
-contract BasicOracle is OracleBase, Ownable {
+contract BasicOracle is Migratable, OracleBase, Ownable {
 
   address public dataSource;
 
-  constructor(address _dataSource) public {
+  function initialize(address _dataSource) public isInitializer("BasicOracle", "0.0.0") {
     dataSource = _dataSource;
   }
 
