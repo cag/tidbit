@@ -5,13 +5,15 @@ import "../BasicOracle.sol";
 
 contract BasicPushOracle is BasicOracle, PushOracleBase {
 
-  constructor (
+  function initialize (
     address _dataSource,
     IOracleHandler _handler
   )
     public
-    BasicOracle(_dataSource)
-    PushOracleBase(_handler)
-  {}
+    isInitializer("BasicPushOracle", "0.0.0")
+  {
+    BasicOracle.initialize(_dataSource);
+    PushOracleBase.initialize(_handler, 0);
+  }
 
 }
