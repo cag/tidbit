@@ -2,12 +2,13 @@ pragma solidity ^0.4.24;
 
 import "./IOracleHandler.sol";
 import "../OracleBase.sol";
+import "zos-lib/contracts/migrations/Migratable.sol";
 
-contract PushOracleBase is OracleBase {
+contract PushOracleBase is Migratable, OracleBase {
 
   IOracleHandler public handler;
 
-  constructor(IOracleHandler _handler) public {
+  function initialize(IOracleHandler _handler, uint unusedParam) public isInitializer("PushOracleBase", "0.0.0") {
     handler = _handler;
   }
 
