@@ -10,7 +10,7 @@ contract SignedPushOracle is SignedOracle, PushOracleBase {
     IOracleHandler _handler
   )
     public
-    isInitializer("BasicPushOracle", "0.1.0")
+    isInitializer("BasicPushOracle", "0.1.3")
   {
     SignedOracle.initialize(_dataSource);
     PushOracleBase.initialize(_handler, 0);

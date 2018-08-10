@@ -1,10 +1,10 @@
 {
   "contracts": {
     "BasicOracle": {
-      "address": "0xcb094263fad7559be7c4fe7a2392b9ecafd1d05c",
+      "address": "0xf6d1e4e2c7de73c26fed069b5ca47bc514d29ab7",
       "constructorCode": "608060405234801561001057600080fd5b5061097e806100206000396000f300",
-      "bodyBytecodeHash": "71fa882d8d13ee0fa928de09ae117a16c98a19d8ad018f359d55df46b24bc6cb",
-      "bytecodeHash": "6b39d18aabc8041f0ed4417a92e5c7f5c1843d378279446e9befa764fda4ffe4"
+      "bodyBytecodeHash": "bddc7b195a2734d900daf682a867f37f4866e494a7de9cc31f5ea1481b5c976f",
+      "bytecodeHash": "b9a08253955fcdc3d8cf0b893aabc39841108a032a76e6d1d4517850f08debe4"
     }
   },
   "lib": true,
@@ -13,7 +13,7 @@
     "address": "0x3aaf6e272c40d36885d9bbdebf2b1d59c37382ce"
   },
   "provider": {
-    "address": "0xa129be31cb4635afed20d92f6567983dbaf1435a"
+    "address": "0x3cfc808a938e144d129eab9ebd76795ac3e9a03d"
   },
-  "version": "0.1.0"
+  "version": "0.1.3"
 }
