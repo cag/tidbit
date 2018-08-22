@@ -37,17 +37,6 @@ Push contracts to a network
 zos push --network development
 ```
 
-Create a new instance of a contract
-```
-zos create BasicOracle --init initialize --args DATA_SOURCE_ACCOUNT --network development
-```
-
-Upgrade a contract - First, push updated contracts `zos push --network development`
-
-```
-zos update BasicOracle --network development
-```
-
 Link the Tidbit library
 ```
 zos link tidbit-contracts-zos
