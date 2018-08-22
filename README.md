@@ -48,6 +48,10 @@ Upgrade a contract - First, push updated contracts `zos push --network developme
 zos update BasicOracle --network development
 ```
 
+Link the Tidbit library
+```
+zos link tidbit-contracts-zos
+```
 
 ### Test
 
