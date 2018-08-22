@@ -1,16 +1,24 @@
 # Tidbit
 
-A library for building oracles on Ethereum
+A library for oracles on Ethereum.
+
+#### Inheritance Tree
+
+```
+IOracle
+   |
+   v
+OracleBase --------> BasicOracle ------> SignedOracle
+   |                      |                   |
+   v                      v                   v
+PushOracleBase --> BasicPushOracle --> SingedPushOracle
+```
 
 ### Setup
 
-Make sure you have the following installed globally:
+Install ZeppelinOS globally: `npm install --global zos`
 
-node 8
-
-TestRPC 6: `npm install -g ethereumjs-testrpc`
-
-Then run `npm install`
+Then run `yarn install`
 
 `chmod +x ./scripts/**` to grant execute permissions on the scripts directory
 
@@ -19,44 +27,34 @@ Then run `npm install`
 Recompile contracts and build artifacts.
 
 ```
-$ npm run compile
+$ yarn compile
 ```
 
-### Deploy
+### ZeppelinOS
 
-Deploy contracts to RPC provider at port `8546`.
+Push contracts to a network
+```
+zos push --network development
+```
+
+Create a new instance of a contract
+```
+zos create BasicOracle --init initialize --args DATA_SOURCE_ACCOUNT --network development
+```
+
+Upgrade a contract - First, push updated contracts `zos push --network development`
 
 ```
-$ npm run testrpc
-$ npm run deploy
+zos update BasicOracle --network development
 ```
+
 
 ### Test
 
-Run `npm run compile` before first test run, and after any changes to the `.sol` files
+Run `yarn compile` before first test run, and after any changes to the `.sol` files
 
 ```
-$ npm test
+$ yarn test
 ```
 
-Run `npm run test:coverage` to run with coverage reporting
-
-### Deployment Setup
-
-Add `secrets.json` to the project root
-
-```
-// secrets.json
-{
-  "mnemonic": "<some mnemonic>",
-  "infura_apikey": "<your infura key>"
-}
-```
-
-Go to https://iancoleman.github.io/bip39/, click "Generate". Add `BIP39 Mnemonic` to `"mnemonic"` value in `secrets.json`
-
-Add address from the BIP39 page to MetaMask. Send it some rinkeby Ether, or get it from the faucet on https://www.rinkeby.io
-
-Go to https://infura.io/register.html to register for Infura. Paste your API key into `"infura_apikey"` value in `secrets.json`
-
-`npm run deploy-rinkeby` to deploy to rinkeby
+Run `yarn test:coverage` to run with coverage reporting
