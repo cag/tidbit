@@ -9,7 +9,7 @@ contract SignedOracle is BasicOracle {
     address _dataSource
   )
     public
-    isInitializer("SignedOracle", "0.1.3")
+    isInitializer("SignedOracle", "0.1.4")
   {
     BasicOracle.initialize(_dataSource);
   }
