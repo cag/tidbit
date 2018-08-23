@@ -8,6 +8,7 @@ coverage.json
 allFiredEvents
 scTopics
 coverageEnv
+password_kovan.txt
 
 .zos.session
 zos.development.json
