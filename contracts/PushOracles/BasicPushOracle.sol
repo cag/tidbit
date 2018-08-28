@@ -13,7 +13,7 @@ contract BasicPushOracle is BasicOracle, PushOracleBase {
     isInitializer("BasicPushOracle", "0.1.4")
   {
     BasicOracle.initialize(_dataSource);
-    PushOracleBase.initialize(_handler, 0);
+    PushOracleBase.initialize(_handler);
   }
 
 }
