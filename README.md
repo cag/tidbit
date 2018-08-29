@@ -2,7 +2,11 @@
 
 A library for oracles on Ethereum.
 
-#### Inheritance Tree
+### Contracts
+
+For more information on each contract checkout the  [documentation](https://levelkdev.github.io/tidbit/docs/Oracles_OracleBase.html).
+
+##### Inheritance Tree
 
 ```
 IOracle
@@ -25,7 +29,7 @@ Then run `npm install`
 Recompile contracts and build artifacts.
 
 ```
-$ npm tun compile
+$ npm run compile
 ```
 
 ### Test
